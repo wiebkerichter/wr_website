@@ -1,0 +1,274 @@
+:root {
+  --branding-color: #d45aa0;
+  --dark-second-color: rgb(207, 206, 206);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  margin-bottom: 50px;
+}
+
+footer h4 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer i {
+  color: var(--branding-color);
+  font-size: 35px;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.mt {
+  margin-top: 180px;
+}
+
+.branding-color {
+  color: var(--branding-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.nav h2 {
+  margin: 0;
+}
+
+.change-theme-Icon {
+  color: black;
+  font-size: 20px;
+}
+
+.nav ul {
+  margin: 0;
+}
+
+.nav li {
+  display: inline;
+  list-style: none;
+  margin-left: 15px;
+}
+
+.nav li a {
+  font-size: 16px;
+}
+
+a {
+  transition: all 100ms ease-in-out;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: var(--branding-color);
+}
+
+.nav-Icon {
+  display: none;
+}
+
+.hero-content {
+  padding: 217px 290px 0 0;
+}
+
+.hero {
+  background-image: url(./images/wiebke_web_hero_white_sm.png);
+  background-size: inherit;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.hero p {
+  font-size: 24px;
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.tool-content {
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tools-grid img {
+  max-width: 120px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.work-grid img {
+  width: 100%;
+}
+
+.work-content {
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.work-content p {
+  margin: 0 0 10px;
+}
+
+.work-content img {
+  height: 298px;
+  object-fit: cover;
+  object-position: top;
+  transition: all 150ms ease-in-out;
+}
+
+.work-content img:hover {
+  transform: scale(1.5);
+}
+
+.dark {
+  background: linear-gradient(to right, black, #151515);
+  color: var(--dark-second-color);
+}
+.dark a {
+  color: var(--dark-second-color);
+}
+
+.dark a:hover {
+  color: var(--branding-color);
+}
+
+.dark .work-content,
+.dark .tool-content {
+  background-color: var(--dark-second-color);
+  color: #000;
+}
+
+.dark .work-content img {
+  filter: grayscale(80%);
+}
+
+.dark .work-content img:hover {
+  filter: none;
+}
+
+.dark .hero {
+  background-image: url(./images/wiebke_web_hero_dark_sm.png);
+  background-size: inherit;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 960px) {
+  .nav-Icon {
+    display: block;
+    font-size: 24px;
+    color: black;
+  }
+
+  .nav #Nav {
+    display: none;
+  }
+
+  .nav ul {
+    margin-top: 30px;
+  }
+
+  .nav li {
+    padding: 15px;
+  }
+
+  .hero-content {
+    padding: 125px 290px 70px 0;
+  }
+  .hero-content h1 {
+    font-size: 50px;
+  }
+  .dark .hero {
+    margin-right: -30px;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  footer i {
+    font-size: 20px;
+  }
+  .mt {
+    margin-top: 50px;
+  }
+  .container {
+    margin: 0;
+    padding: 0;
+  }
+  .hero-content {
+    padding: 100px 170px 70px 0;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .hero-content p {
+    font-size: 15px;
+  }
+  .hero,
+  .dark .hero {
+    background-size: 33%;
+  }
+  .tools-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 445px) {
+  .hero-content {
+    padding: 70px 170px 70px 0;
+  }
+  .hero-content h1 {
+    font-size: 24px;
+  }
+  .hero-content p {
+    font-size: 12px;
+  }
+}

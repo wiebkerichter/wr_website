@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/61726ff269.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./src/styles.css" />
+
+    <title>Frontend Dev and Projectmanager - Wiebke Richter</title>
+  </head>
+  <body class="light">
+    <div class="container">
+      <div class="nav">
+        <h2>Wiebke Richter</h2>
+        <a href="#" class="change-theme-Icon">
+          <i class="fa-solid fa-sun"></i>
+        </a>
+        <div id="Nav">
+          <ul>
+            <li>
+              <a href="#skills">Skills</a>
+            </li>
+            <li>
+              <a href="#work">Projects</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:void(0);" class="nav-Icon" onclick="changeMenu()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="hero">
+        <div class="hero-content">
+          <h1>
+            Junior <span class="branding-color">Front-End Developer</span>
+          </h1>
+          <p>
+            Hi, I am Wiebke and I am a junior front end Developer on Mallorca. I
+            am German, speak good English and learn Spanish in my free time.
+          </p>
+        </div>
+      </div>
+
+      <section class="tools-section mt" id="skills">
+        <h3>Tools / Skills</h3>
+        <div class="tools-grid">
+          <div class="tool-content">
+            <img src="./src/images/html.png" />
+            <p>HTML</p>
+          </div>
+          <div class="tool-content">
+            <img src="./src/images/css.png" />
+            <p>CSS</p>
+          </div>
+          <div class="tool-content">
+            <img src="./src/images/javascript.png" />
+            <p>JavaScript</p>
+          </div>
+
+          <div class="tool-content">
+            <img src="./src/images/bootstrap.png" />
+            <p>Bootstrap</p>
+          </div>
+          <div class="tool-content">
+            <img src="./src/images/github.png" />
+            <p>GitHub</p>
+          </div>
+          <div class="tool-content">
+            <img src="./src/images/react.png" />
+            <p>React</p>
+          </div>
+        </div>
+      </section>
+      <section class="work-section mt" id="work">
+        <h3>My work</h3>
+        <div class="work-grid">
+          <div class="work-content">
+            <h4>Weather App</h4>
+            <p>built with React and bootstrap</p>
+            <a href="https://weather-react-app-wr.netlify.app/" target="_blank">
+              <img src="./src/images/screenshot_weather.jpg"
+            /></a>
+          </div>
+          <div class="work-content">
+            <h4>World Clock</h4>
+            <p>built with JavaScript</p>
+            <a
+              href="https://world-clock-js-project-wr.netlify.app"
+              target="_blank"
+            >
+              <img src="./src/images/screenshot_clock.jpg"
+            /></a>
+          </div>
+          <div class="work-content">
+            <h4>Travel App</h4>
+            <p>Responsive</p>
+            <a
+              href="https://santa-maria-travel-project.netlify.app/"
+              target="_blank"
+            >
+              <img src="./src/images/screenshot_travel.jpg"
+            /></a>
+          </div>
+          <div class="work-content">
+            <h4>Dictionary App</h4>
+            <p>built with React</p>
+            <a href="https://dictionary-react-wr.netlify.app" target="_blank">
+              <img src="./src/images/screenshot_dictionary.jpg"
+            /></a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt" id="contact">
+        <h3>Contact</h3>
+        <h4>
+          mail@wiebkerichter.com | +49 172 166 999 6 |
+          <a
+            href="./src/images/Resume_wiebkerichter_2023_print.pdf"
+            target="_blank"
+            >Résumé (EN)</a
+          >
+          <br />
+          <a href="https://github.com/wiebkerichter" target="_blank"
+            ><i class="fa-brands fa-github margin-right"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/wiebkerichter/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in margin-right"></i
+          ></a>
+          <!--
+        <a href="https://www.instagram.com/richterwiebke/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        --></h4>
+      </footer>
+    </div>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      function changeMenu() {
+        let x = document.getElementById("Nav");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+
+      let a = document.querySelector(".change-theme-Icon");
+      a.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
